@@ -1,7 +1,13 @@
 const express = require('express'); // Calling a module, like RoR require 'something'
 const exphbs = require('express-handlebars');
+const mongoose = require('mongoose');
 const app = express();
 const port = 5000;
+
+// Connect to Mongoose
+mongoose.connect('mongodb://localhost/vidjot-dev', {}) // Remote or Local options; vidjot-dev can be any name
+  .then(() => console.log('MongoDB Connected'))
+  .catch(() => console.log(err)); // Log an error
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
