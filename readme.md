@@ -32,6 +32,7 @@ localhost:5000
 * JavaScript
   * Express
   * Node
+  * ES6
 * MongoDB
   * Mongoose
 
