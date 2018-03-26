@@ -9,7 +9,10 @@ app.set('view engine', 'handlebars');
 
 // Index Route
 app.get('/', (request, response) => {
-  response.render('index');
+  const title = 'Welcome';
+  response.render('index', {
+    title: title
+  });
 });
 
 // About Route
