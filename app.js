@@ -9,12 +9,12 @@ app.set('view engine', 'handlebars');
 
 // Index Route
 app.get('/', (request, response) => {
-  response.send('INDEX');
+  response.render('index');
 });
 
 // About Route
 app.get('/about', (request, response) => {
-  response.send('ABOUT');
+  response.render('ABOUT');
 });
 
 app.listen(port, () => {
